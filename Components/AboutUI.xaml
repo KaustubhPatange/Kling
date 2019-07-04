@@ -1,0 +1,24 @@
+﻿<Window x:Class="Components.AboutUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Components"
+        Icon="Resources\keyboard.png"
+        mc:Ignorable="d"
+        Title="About - v1.0" Height="210.4" ResizeMode="NoResize" Width="302.8" WindowStartupLocation="CenterScreen">
+    <StackPanel Orientation="Vertical">
+        <Image Margin="0,10,0,5" Height="60" Source="Resources/keyboard.png"></Image>
+        <Separator Width="200"/>
+        <TextBlock Margin="0,5,0,0" Text="Kling" HorizontalAlignment="Center" FontWeight="Bold"/>
+        <TextBlock Margin="0,3,0,0" TextAlignment="Center" Width="200" TextWrapping="WrapWithOverflow" Text="A utility to show keyboard keys visually on the window screen." HorizontalAlignment="Center" FontSize="10"/>
+        <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+            <Button  Margin="8,8,0,0" Cursor="Hand" Name="_github" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Width="22" Height="22" Source="Resources/github.png"/>
+            </Button>
+            <Button Visibility="Collapsed"  Margin="8,8,0,0" Name="_website" Cursor="Hand" Style="{StaticResource {x:Static ToolBar.ButtonStyleKey}}">
+                <Image Width="22" Height="20" Source="Resources/visitweb.png"/>
+            </Button>
+        </StackPanel>
+    </StackPanel>
+</Window>

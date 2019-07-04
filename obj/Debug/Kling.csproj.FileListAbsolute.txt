@@ -1,0 +1,13 @@
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.Properties.Resources.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csproj.GenerateResource.Cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Kling.exe.config
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Kling.exe
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Kling.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Components.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\KeyMouseHook.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Components.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.exe
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.display.resources

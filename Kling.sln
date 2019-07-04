@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26403.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kling", "Kling.csproj", "{9F6AE618-16D8-443F-870B-5C8362ABAB5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Components", "Components\Components.csproj", "{CF23D81A-25BB-4E0F-BBA7-C3B13113811C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9F6AE618-16D8-443F-870B-5C8362ABAB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F6AE618-16D8-443F-870B-5C8362ABAB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F6AE618-16D8-443F-870B-5C8362ABAB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F6AE618-16D8-443F-870B-5C8362ABAB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF23D81A-25BB-4E0F-BBA7-C3B13113811C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF23D81A-25BB-4E0F-BBA7-C3B13113811C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF23D81A-25BB-4E0F-BBA7-C3B13113811C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF23D81A-25BB-4E0F-BBA7-C3B13113811C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E7BBCC1D-3C5F-4590-8F13-166CDF463AB8}
+	EndGlobalSection
+EndGlobal
