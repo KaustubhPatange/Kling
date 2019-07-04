@@ -1,17 +1,17 @@
 # Kling : Visual Keylogger
+
 ![GitHub issues](https://img.shields.io/github/issues/KaustubhPatange/Kling.svg)
 [![Licence](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 ![GitHub repo size](https://img.shields.io/github/repo-size/KaustubhPatange/Kling.svg)
 
 ![Logo](https://github.com/KaustubhPatange/Kling/raw/master/images/icon.ico)
 
+
 ## Downloads
 
 Version | MD5 hash | Downloads |
 --- | --- | --- |
 v1.0   | cac0f93be6821df4eeb0b675e60d047d  |  [klingv1.0_win64.zip](https://github.com/KaustubhPatange/Kling/releases/download/1.0/klingv1.0_win64.zip)
-
-*The name **Kling** is made from two words **Keys & Fling**, so I decided to merge them as one word.*
 
 ## Screenshot
 
@@ -20,6 +20,8 @@ v1.0   | cac0f93be6821df4eeb0b675e60d047d  |  [klingv1.0_win64.zip](https://gith
 ![SlideShow](https://github.com/KaustubhPatange/Kling/raw/master/images/kling.gif)
 
 ## Features
+
+*The name **Kling** is made from two words **Keys & Fling**, so I decided to merge them as one word.*
 
 * Visually display keys on Windows screen
 * Detect multiple keys and key holds
