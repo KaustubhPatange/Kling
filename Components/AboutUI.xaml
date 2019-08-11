@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Components"
         Icon="Resources\keyboard.png"
         mc:Ignorable="d"
-        Title="About - v1.0" Height="210.4" ResizeMode="NoResize" Width="302.8" WindowStartupLocation="CenterScreen">
+        Title="About - v1.1" Height="210.4" ResizeMode="NoResize" Width="302.8" WindowStartupLocation="CenterScreen">
     <StackPanel Orientation="Vertical">
         <Image Margin="0,10,0,5" Height="60" Source="Resources/keyboard.png"></Image>
         <Separator Width="200"/>
