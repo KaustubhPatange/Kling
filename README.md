@@ -11,6 +11,7 @@
 
 Version | MD5 hash | Downloads |
 --- | --- | --- |
+v1.1   | cac0f93be6821df4eeb0b675e60d047d  |  [klingv1.1_win64.zip](https://github.com/KaustubhPatange/Kling/releases/download/1.1/klingv1.1_win64.zip)
 v1.0   | cac0f93be6821df4eeb0b675e60d047d  |  [klingv1.0_win64.zip](https://github.com/KaustubhPatange/Kling/releases/download/1.0/klingv1.0_win64.zip)
 
 ## Screenshot
