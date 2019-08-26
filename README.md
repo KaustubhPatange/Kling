@@ -1,6 +1,6 @@
 # Kling : Visual Keylogger
 
-![GitHub issues](https://img.shields.io/github/issues/KaustubhPatange/Kling.svg)
+![GitHub issues](https://img.shields.io/github/issues/KaustubhPatange/Kling)
 [![Licence](https://img.shields.io/badge/license-GPLv3-blue.svg?style=flat-square)](https://www.gnu.org/licenses/gpl-3.0.en.html)
 ![GitHub repo size](https://img.shields.io/github/repo-size/KaustubhPatange/Kling.svg)
 
@@ -11,8 +11,10 @@
 
 Version | MD5 hash | Downloads |
 --- | --- | --- |
+v1.2   | cac0f93be6821df4eeb0b675e60d047d  |  [klingv1.2_win64.zip](https://github.com/KaustubhPatange/Kling/releases/download/1.2/klingv1.2_win64.zip)
 v1.1   | cac0f93be6821df4eeb0b675e60d047d  |  [klingv1.1_win64.zip](https://github.com/KaustubhPatange/Kling/releases/download/1.1/klingv1.1_win64.zip)
 v1.0   | cac0f93be6821df4eeb0b675e60d047d  |  [klingv1.0_win64.zip](https://github.com/KaustubhPatange/Kling/releases/download/1.0/klingv1.0_win64.zip)
+
 
 ## Screenshot
 
