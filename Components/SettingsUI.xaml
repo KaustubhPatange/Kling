@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Components"
         mc:Ignorable="d" ResizeMode="NoResize" Icon="Resources\keyboard.png"
         Topmost="true" WindowStartupLocation="CenterScreen"
-        Title="Settings" Height="275" Width="360">
+        Title="Settings" Height="300" Width="360">
     <Border Padding="7" >
         <StackPanel Orientation="Vertical">
 
@@ -76,6 +76,11 @@
             <!-- Display standard keys options -->
             <CheckBox Name="_standardCheckBox" IsChecked="True" Margin="0,7,0,0" VerticalAlignment="Center">
                 <TextBlock Margin="3,0,0,0" Text="Display standard text for special keys." />
+            </CheckBox>
+
+            <!-- Display standard keys options -->
+            <CheckBox Name="_logkeys" IsChecked="True" Margin="0,7,0,0" VerticalAlignment="Center">
+                <TextBlock Margin="3,0,0,0" Text="Log key pressed into app.log file" />
             </CheckBox>
 
             <!-- Buttons -->

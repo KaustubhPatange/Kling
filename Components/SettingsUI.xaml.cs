@@ -37,6 +37,7 @@ namespace Components
               $"yaxis={_yaxis.Text}" + Environment.NewLine +
               $"displaytime={(int)_timeSlider.Value}" + Environment.NewLine +
               $"notify={_messageCheckBox.IsChecked.ToString()}" + Environment.NewLine +
+              $"logkeys={_logkeys.IsChecked.ToString()}" + Environment.NewLine +
               $"stdkeys={_standardCheckBox.IsChecked.ToString()}" + Environment.NewLine);
                 System.Windows.MessageBox.Show("Restart the application in order to apply the settings", "Notice", MessageBoxButton.OK, MessageBoxImage.Information);
                 Close();
@@ -78,6 +79,7 @@ namespace Components
                 _timeSlider.Value = Convert.ToDouble(myIni.Read("displaytime", "Settings"));
                 _messageCheckBox.IsChecked = Convert.ToBoolean(myIni.Read("notify", "Settings"));
                 _standardCheckBox.IsChecked = Convert.ToBoolean(myIni.Read("stdkeys", "Settings"));
+                _logkeys.IsChecked = Convert.ToBoolean(myIni.Read("logkeys", "Settings"));
             }
         }
 

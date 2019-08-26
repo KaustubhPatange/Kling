@@ -25,7 +25,8 @@ namespace Components
 
             _github.Click += (o, e) =>
               {
-                  Process.Start("https://github.com/KaustubhPatange/Kling");
+                  Process
+                  .Start("https://github.com/KaustubhPatange/Kling");
               };
         }
     }

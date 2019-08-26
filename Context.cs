@@ -24,7 +24,7 @@ namespace Kling
         private List<MacroEvent> _macroEvents;
 
         bool isaboutshowing = false, specialkeys = false, suppresskey = false, settingshowing = false,
-        notify = true, stdkeys = true; int displaytime=2; bool record = true;
+        notify = true, stdkeys = true; int displaytime=2; bool record = true; bool logkeys = false;
         System.Drawing.Point location; Components.SettingsUI settingsui;
         public Context()
         {
@@ -41,6 +41,7 @@ namespace Kling
                     "yaxis=" + (height - new display().Height - 60) + Environment.NewLine +
                     "displaytime=2" + Environment.NewLine +
                     "notify=True" + Environment.NewLine +
+                    "logkeys=True" + Environment.NewLine +
                     "stdkeys=True" + Environment.NewLine);
             }
             if (File.Exists(@"config.ini"))
@@ -53,6 +54,7 @@ namespace Kling
                 displaytime = Convert.ToInt16(myini.Read("displaytime", "Settings"));
                 notify = Convert.ToBoolean(myini.Read("notify", "Settings"));
                 stdkeys = Convert.ToBoolean(myini.Read("stdkeys", "Settings"));
+                logkeys = Convert.ToBoolean(myini.Read("logkeys", "Settings"));
             }
             keyui = new display();
             keyui.Location = location;
@@ -225,7 +227,8 @@ namespace Kling
             timer.Stop();
 
             keyui.SetText(Text);
-            
+            if (logkeys)
+                File.AppendAllText("app.log", $"[{DateTime.Now.ToString()}] {Text}{Environment.NewLine}");
             timer.Start();
             keyui.Show();
         }

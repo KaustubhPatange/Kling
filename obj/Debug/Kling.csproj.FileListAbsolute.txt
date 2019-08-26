@@ -1,4 +1,3 @@
-C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csprojResolveAssemblyReference.cache
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.Properties.Resources.resources
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csproj.GenerateResource.Cache
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Kling.exe.config
@@ -11,3 +10,6 @@ C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Components.p
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.exe
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.pdb
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.display.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csproj.CopyComplete

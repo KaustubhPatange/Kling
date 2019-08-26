@@ -14,7 +14,6 @@ C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Setting
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\SettingsUI.baml
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\bin\Debug\Components.dll
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\bin\Debug\Components.pdb
-C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.csprojResolveAssemblyReference.cache
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\AboutUI.g.cs
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\SettingsUI.g.cs
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components_MarkupCompile.cache
@@ -26,3 +25,5 @@ C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\C
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.csproj.GenerateResource.Cache
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.dll
 C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.csproj.CoreCompileInputs.cache
