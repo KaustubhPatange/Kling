@@ -7,24 +7,27 @@ using System.Windows;
 using System.IO;
 using System.Threading.Tasks;
 using Adb_gui_Apkbox_plugin;
+using System.Diagnostics;
+using Components;
 
 namespace Kling
 {
     public class Context : ApplicationContext
     {
-        private System.Windows.Window _hiddenWindow;
+        private Window _hiddenWindow;
         private System.ComponentModel.IContainer _components;
         private NotifyIcon _notifyIcon;
         private display keyui;
         Timer timer;
         private ContextMenuStrip _contextmenustrip;
 
+        private IKeyboardMouseEvents m_GlobalHook;
         private readonly KeyMouseFactory eventHookFactory = new KeyMouseFactory(Hook.GlobalEvents());
         private readonly KeyboardWatcher keyboardWatcher;
         private List<MacroEvent> _macroEvents;
 
-        bool isaboutshowing = false, specialkeys = false, suppresskey = false, settingshowing = false,
-        notify = true, stdkeys = true; int displaytime=2; bool record = true; bool logkeys = false;
+        bool isaboutshowing = false, specialkeys = false, suppresskey = false, suppresskey2 = false, settingshowing = false,
+        notify = true, stdkeys = true; int displaytime = 2; bool record = true; bool logkeys = false;
         System.Drawing.Point location; Components.SettingsUI settingsui;
         public Context()
         {
@@ -48,7 +51,7 @@ namespace Kling
             {
                 var myini = new IniFile(@"config.ini");
                 location = new System.Drawing.Point(
-                    Convert.ToInt16(myini.Read("xaxis","Settings")),
+                    Convert.ToInt16(myini.Read("xaxis", "Settings")),
                     Convert.ToInt16(myini.Read("yaxis", "Settings"))
                     );
                 displaytime = Convert.ToInt16(myini.Read("displaytime", "Settings"));
@@ -58,9 +61,10 @@ namespace Kling
             }
             keyui = new display();
             keyui.Location = location;
-          
+
             _contextmenustrip = new ContextMenuStrip();
-            _contextmenustrip.Items.Add(NewToolStripItem("Stop recording", (o,s)=> {
+            _contextmenustrip.Items.Add(NewToolStripItem("Stop recording", (o, s) =>
+            {
                 var firstItem = _contextmenustrip.Items[0];
                 if (record)
                 {
@@ -68,7 +72,8 @@ namespace Kling
                     record = false;
                     firstItem.Text = "Start recording";
                     DisplayStatusMessage("Kling : Service stopped");
-                }else
+                }
+                else
                 {
                     // Start Recording
                     record = true;
@@ -78,8 +83,9 @@ namespace Kling
             }));
             _contextmenustrip.Items.Add(new ToolStripSeparator());
             _contextmenustrip.Items.Add(NewToolStripItem("Settings", ShowSettings));
-            _contextmenustrip.Items.Add(NewToolStripItem("Restart", (o,s)=> { System.Windows.Forms.Application.Restart(); }));
-            _contextmenustrip.Items.Add(NewToolStripItem("About", (o, s) => {
+            _contextmenustrip.Items.Add(NewToolStripItem("Restart", (o, s) => { System.Windows.Forms.Application.Restart(); }));
+            _contextmenustrip.Items.Add(NewToolStripItem("About", (o, s) =>
+            {
                 // About screen dialog
                 if (!isaboutshowing)
                 {
@@ -110,7 +116,7 @@ namespace Kling
 
             _hiddenWindow = new System.Windows.Window();
             _hiddenWindow.Hide();
-            DisplayStatusMessage(_notifyIcon.Text+": Start pressing keys");
+            DisplayStatusMessage(_notifyIcon.Text + ": Start pressing keys");
 
             keyboardWatcher = eventHookFactory.GetKeyboardWatcher();
             keyboardWatcher.OnKeyboardInput += (s, e) =>
@@ -143,33 +149,79 @@ namespace Kling
                         {
                             suppresskey = false;
                             return;
-                        }                        
+                        }
 
-                        if (isControlPressed(keyEvent,keys))
+                        if (suppresskey2)
+                        {
+                            suppresskey2 = false;
+                            return;
+                        }
+                        
+                        if (isControlPressed(keyEvent, keys))
                         {
                             specialkeys = true;
-                            if (isShiftPressed(keyEvent,keys))
-                                showKey("Ctrl + Shift + ", keys);  
-                            else if (isAltPressed(keyEvent,keys))
-                                showKey("Ctrl + Alt + ", keys);
-                            else DisplayKeys("Ctrl + " + getKeys(keys.ToString()));                           
+                            if (isShiftPressed(keyEvent, keys))
+                            {
+                                if (isAltPressed(keyEvent, keys))
+                                {
+                                    suppresskey2 = true;
+                                    showKey("Ctrl + Shift + Alt + ", keys);
+                                }
+                                else showKey("Ctrl + Shift + ", keys);
+                            }
+                            else if (isAltPressed(keyEvent, keys))
+                            {
+                                if (isShiftPressed(keyEvent, keys))
+                                {
+                                    suppresskey2 = true;
+                                    showKey("Ctrl + Alt + Shift + ", keys);
+                                }
+                                else showKey("Ctrl + Alt + ", keys);
+                            }
+                            else DisplayKeys("Ctrl + " + getKeys(keys.ToString()));
                         }
                         else if (isAltPressed(keyEvent, keys))
                         {
                             specialkeys = true;
                             if (isShiftPressed(keyEvent, keys))
-                                showKey("Alt + Shift + ", keys);
-                            else if (isControlPressed(keyEvent, keys))
-                                showKey("Alt + Ctrl + ", keys);
+                            {
+                                if (isControlPressed(keyEvent, keys))
+                                {
+                                    suppresskey2 = true;
+                                    showKey("Alt + Shift + Ctrl + ", keys);
+                                }
+                                else showKey("Alt + Shift + ", keys);
+                            }
+                            else if (isControlPressed(keyEvent, keys)) 
+                            {
+                                if (isShiftPressed(keyEvent, keys))
+                                {
+                                    suppresskey2 = true;
+                                    showKey("Alt + Ctrl + Shift + ", keys);
+                                }else 
+                                    showKey("Alt + Ctrl + ", keys);
+                            }
                             else DisplayKeys("Alt + " + getKeys(keys.ToString()));
                         }
                         else if (isShiftPressed(keyEvent, keys))
                         {
                             specialkeys = true;
-                            if (isControlPressed(keyEvent, keys))
-                                showKey("Shift + Ctrl + ", keys);
+                            if (isControlPressed(keyEvent, keys)) 
+                            {
+                                if (isAltPressed(keyEvent, keys))
+                                {
+                                    suppresskey2 = true;
+                                    showKey("Shift + Ctrl + Alt + ", keys);
+                                }else showKey("Shift + Ctrl + ", keys);
+                            }
                             else if (isAltPressed(keyEvent, keys))
-                                showKey("Shift + Alt + ", keys);
+                            {
+                                if (isControlPressed(keyEvent, keys))
+                                {
+                                    suppresskey2 = true;
+                                    showKey("Shift + Alt + Ctrl + ", keys);
+                                }else showKey("Shift + Alt + ", keys);
+                            }
                             else DisplayKeys("Shift + " + getKeys(keys.ToString()));
                         }
                         else
@@ -188,8 +240,9 @@ namespace Kling
             keyboardWatcher.Start(Hook.GlobalEvents());
 
             timer = new Timer();
-            timer.Interval = displaytime*1000;
-            timer.Tick += async (o, e) => {
+            timer.Interval = displaytime * 1000;
+            timer.Tick += async (o, e) =>
+            {
                 timer.Stop();
                 while (keyui.Opacity > 0.0)
                 {
@@ -200,7 +253,61 @@ namespace Kling
                 keyui.Hide();
                 keyui.Opacity = 0.7;
             };
+
+            //Subscribe();
+            //ThreadExit += (o, e) =>
+            //{
+            //    Unsubscribe();
+            //};
         }
+
+        private List<CodeUI> windows = new List<CodeUI>();
+        public void Subscribe()
+        {
+            m_GlobalHook = Hook.GlobalEvents();
+
+            m_GlobalHook.MouseDownExt += GlobalHookMouseDownExt;
+            m_GlobalHook.KeyPress += GlobalHookKeyPress;
+            m_GlobalHook.KeyDown += M_GlobalHook_KeyDown;
+        }
+
+        private void M_GlobalHook_KeyDown(object sender, KeyEventArgs e)
+        {
+            foreach (var ui in windows)
+            {
+                ui.PushUp();
+            }
+            var codeUI = new CodeUI(displaytime)
+                .SetText(e.KeyCode.ToString());
+            codeUI.Closing += (o, ex) => { windows.Remove(codeUI); };
+            //.SetLocation(location.X, location.Y);
+            codeUI.Show();
+            windows.Add(codeUI);
+            Debug.WriteLine("KeyDown: " + e.KeyCode.ToString());
+        }
+
+        private void GlobalHookKeyPress(object sender, KeyPressEventArgs e)
+        {
+            Debug.WriteLine("KeyPress: \t{0}", e.KeyChar);
+        }
+
+        private void GlobalHookMouseDownExt(object sender, MouseEventExtArgs e)
+        {
+            Debug.WriteLine("MouseDown: \t{0}; \t System Timestamp: \t{1}", e.Button, e.Timestamp);
+
+            // uncommenting the following line will suppress the middle mouse button click
+            // if (e.Buttons == MouseButtons.Middle) { e.Handled = true; }
+        }
+
+        public void Unsubscribe()
+        {
+            m_GlobalHook.MouseDownExt -= GlobalHookMouseDownExt;
+            m_GlobalHook.KeyPress -= GlobalHookKeyPress;
+
+            //It is recommened to dispose it
+            m_GlobalHook.Dispose();
+        }
+
         private void showKey(string Text, Keys keys)
         {
             suppresskey = true;
@@ -237,11 +344,12 @@ namespace Kling
         {
             if (!stdkeys)
                 return Text;
-            if (Text.Length==2)
+            if (Text.Length == 2)
             {
                 if (Text.StartsWith("D"))
                     return Text.Substring(1);
-            }else if (Text.StartsWith("NumPad"))
+            }
+            else if (Text.StartsWith("NumPad"))
             {
                 return Text.Substring(6);
             }
@@ -321,7 +429,7 @@ namespace Kling
         {
             _hiddenWindow.Dispatcher.Invoke(delegate
             {
-               if (notify)
+                if (notify)
                 {
                     _notifyIcon.BalloonTipText = text;
                     if (message != null)

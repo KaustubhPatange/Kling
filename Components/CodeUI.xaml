@@ -1,0 +1,20 @@
+﻿<Window x:Class="Components.CodeUI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Components"
+        mc:Ignorable="d"
+        Focusable="False"
+        WindowStyle="None"
+        ShowInTaskbar="False"
+        WindowStartupLocation="Manual"
+        Topmost="True"
+        Title="CodeUI" SizeToContent="WidthAndHeight" MaxWidth="250">
+    <Border Padding="10">
+        <WrapPanel>
+           
+            <TextBlock TextWrapping="Wrap" x:Name="_tbCode" FontSize="20" />
+        </WrapPanel>
+    </Border>
+</Window>
