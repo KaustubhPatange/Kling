@@ -20,11 +20,10 @@ D:\VisualStudioProjects\Kling\bin\Debug\Components.dll
 D:\VisualStudioProjects\Kling\bin\Debug\Gma.System.MouseKeyHook.dll
 D:\VisualStudioProjects\Kling\bin\Debug\KeyMouseHook.dll
 D:\VisualStudioProjects\Kling\bin\Debug\Components.pdb
-D:\VisualStudioProjects\Kling\obj\Debug\Kling.csprojAssemblyReference.cache
 D:\VisualStudioProjects\Kling\obj\Debug\Kling.display.resources
 D:\VisualStudioProjects\Kling\obj\Debug\Kling.Properties.Resources.resources
 D:\VisualStudioProjects\Kling\obj\Debug\Kling.csproj.GenerateResource.cache
 D:\VisualStudioProjects\Kling\obj\Debug\Kling.csproj.CoreCompileInputs.cache
-D:\VisualStudioProjects\Kling\obj\Debug\Kling.csproj.CopyComplete
 D:\VisualStudioProjects\Kling\obj\Debug\Kling.exe
 D:\VisualStudioProjects\Kling\obj\Debug\Kling.pdb
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.csproj.AssemblyReference.cache

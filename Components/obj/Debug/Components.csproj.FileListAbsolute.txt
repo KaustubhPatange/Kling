@@ -43,4 +43,4 @@ D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.dll
 D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.pdb
 D:\VisualStudioProjects\Kling\Components\obj\Debug\CodeUI.g.cs
 D:\VisualStudioProjects\Kling\Components\obj\Debug\CodeUI.baml
-D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.csprojAssemblyReference.cache
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.csproj.AssemblyReference.cache

@@ -8,7 +8,10 @@ using System.IO;
 using System.Threading.Tasks;
 using Adb_gui_Apkbox_plugin;
 using System.Diagnostics;
+using System.Linq;
+using System.Text.RegularExpressions;
 using Components;
+using MessageBox = System.Windows.Forms.MessageBox;
 
 namespace Kling
 {
@@ -29,6 +32,7 @@ namespace Kling
         bool isaboutshowing = false, specialkeys = false, suppresskey = false, suppresskey2 = false, settingshowing = false,
         notify = true, stdkeys = true; int displaytime = 2; bool record = true; bool logkeys = false;
         System.Drawing.Point location; Components.SettingsUI settingsui;
+        private float opacity = 0.7f;
         public Context()
         {
             _components = new System.ComponentModel.Container();
@@ -45,6 +49,7 @@ namespace Kling
                     "displaytime=2" + Environment.NewLine +
                     "notify=True" + Environment.NewLine +
                     "logkeys=True" + Environment.NewLine +
+                    "opacity=0.7" + Environment.NewLine +
                     "stdkeys=True" + Environment.NewLine);
             }
             if (File.Exists(@"config.ini"))
@@ -58,8 +63,13 @@ namespace Kling
                 notify = Convert.ToBoolean(myini.Read("notify", "Settings"));
                 stdkeys = Convert.ToBoolean(myini.Read("stdkeys", "Settings"));
                 logkeys = Convert.ToBoolean(myini.Read("logkeys", "Settings"));
+                opacity = Convert.ToSingle(myini.Read("opacity", "Settings"));
             }
+
+            LoadKeyConfigs();
+                
             keyui = new display();
+            keyui.Opacity = opacity;
             keyui.Location = location;
 
             _contextmenustrip = new ContextMenuStrip();
@@ -251,7 +261,7 @@ namespace Kling
                 }
                 keyui.Opacity = 0;
                 keyui.Hide();
-                keyui.Opacity = 0.7;
+                keyui.Opacity = opacity;
             };
 
             //Subscribe();
@@ -330,6 +340,7 @@ namespace Kling
         }
         private void DisplayKeys(string Text)
         {
+            if (Text == null) return;
             keyui.Hide();
             timer.Stop();
 
@@ -344,6 +355,7 @@ namespace Kling
         {
             if (!stdkeys)
                 return Text;
+            if (!DoesContainKey(Text)) return null;
             if (Text.Length == 2)
             {
                 if (Text.StartsWith("D"))
@@ -438,6 +450,31 @@ namespace Kling
                     _notifyIcon.ShowBalloonTip(3000);
                 }
             });
+        }
+
+        private List<String> showKeys = new List<string>();
+        private void LoadKeyConfigs()
+        {
+            var lines = File.ReadAllLines(@"keys.txt")
+                .Where(c => !c.StartsWith("#") && !c.Contains(".") && !string.IsNullOrWhiteSpace(c)).ToList();
+            foreach (var line in lines)
+            {
+                try
+                {
+                    var items = line.Split('\t');
+                    if (items[2] == "1") showKeys.Add(items[0]);
+                }
+                catch 
+                {
+                    MessageBox.Show($"Couldn't parse line {line}, incorrect characters.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private bool DoesContainKey(string Text)
+        {
+            if (showKeys.Contains(Text)) return true;
+            return false;
         }
     }
 }

@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Components"
         mc:Ignorable="d" ResizeMode="NoResize" Icon="Resources\keyboard.png"
         Topmost="true" WindowStartupLocation="CenterScreen"
-        Title="Settings" Height="300" Width="360">
+        SizeToContent="Height"
+        Title="Settings" Width="360">
     <Border Padding="7" >
         <StackPanel Orientation="Vertical">
 
@@ -54,8 +55,14 @@
             </Grid>
             <TextBlock Name="_timeText" FontStyle="Italic" FontSize="11" Margin="110,5,0,0" Text="2 seconds, till the text will fade out."/>
 
+            <!-- Opacity -->
+            <StackPanel Margin="0,7,0,0" Orientation="Horizontal">
+                <TextBlock Margin="3,0,0,0" Text="Display Opacity:"/>
+                <TextBox Name="_opacityTb" Margin="30, 0,0,0" Width="68" PreviewTextInput="_opacityTb_OnPreviewTextInput"/>
+            </StackPanel>
+            
             <!-- Separater Other -->
-            <Grid Margin="0,5,0,0">
+            <Grid Margin="0,10,0,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="320"/>
@@ -84,9 +91,14 @@
             </CheckBox>
 
             <!-- Buttons -->
+            <DockPanel Margin="0,15,0,0">
+                <Button Height="22" Width="90" Name="_ignore_keys" Content="Ignore Keys" HorizontalAlignment="Left"/>
+                <Button Margin="10,0,0,0" Height="22" Width="70" Name="_save" Content="Save" HorizontalAlignment="Right" DockPanel.Dock="Right"/>
+                <Button Height="22" Width="70" Name="_cancel" Content="Cancel" HorizontalAlignment="Right"/>
+            </DockPanel>
             <StackPanel Margin="0,15,0,0" Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Height="22" Width="70" Name="_cancel" Content="Cancel"/>
-                <Button Margin="10,0,0,0" Height="22" Width="70" Name="_save" Content="Save"/>
+                
+                
             </StackPanel>
         </StackPanel>      
     </Border>  

@@ -1,5 +1,6 @@
 ﻿using Adb_gui_Apkbox_plugin;
 using System;
+using System.Diagnostics;
 using System.IO;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -29,7 +30,7 @@ namespace Components
             _locationComBo.ItemsSource = new string[] { "Top Left", "Top Right", "Bottom Left", "Bottom Right" };
             _cancel.Click += (o, e) => { Close(); };
             _save.Click += (o, e) =>
-            {
+            {  
               File.WriteAllText(@"config.ini",
               "[Settings]" + Environment.NewLine +
               $"displayindex={_locationComBo.SelectedIndex.ToString()}" + Environment.NewLine +
@@ -38,9 +39,14 @@ namespace Components
               $"displaytime={(int)_timeSlider.Value}" + Environment.NewLine +
               $"notify={_messageCheckBox.IsChecked.ToString()}" + Environment.NewLine +
               $"logkeys={_logkeys.IsChecked.ToString()}" + Environment.NewLine +
+              $"opacity={_opacityTb.Text}" + Environment.NewLine +
               $"stdkeys={_standardCheckBox.IsChecked.ToString()}" + Environment.NewLine);
                 System.Windows.MessageBox.Show("Restart the application in order to apply the settings", "Notice", MessageBoxButton.OK, MessageBoxImage.Information);
                 Close();
+            };
+            _ignore_keys.Click += (o, e) =>
+            {
+                Process.Start(@"keys.txt");
             };
             loadconfigs();
             _locationComBo.SelectionChanged += (o, e) => {
@@ -80,16 +86,25 @@ namespace Components
                 _messageCheckBox.IsChecked = Convert.ToBoolean(myIni.Read("notify", "Settings"));
                 _standardCheckBox.IsChecked = Convert.ToBoolean(myIni.Read("stdkeys", "Settings"));
                 _logkeys.IsChecked = Convert.ToBoolean(myIni.Read("logkeys", "Settings"));
+                _opacityTb.Text = myIni.Read("opacity", "Settings");
+                if (string.IsNullOrWhiteSpace(_opacityTb.Text))
+                    _opacityTb.Text = "0.7";
             }
         }
 
         private void _timeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-           try
+            try
             {
                 _timeText.Text = $"{(int)e.NewValue} seconds, till the text will fade out.";
             }
             catch { }
+        }
+
+        private void _opacityTb_OnPreviewTextInput(object Sender, TextCompositionEventArgs e)
+        {
+            if (!Regex.IsMatch(e.Text, "[0-9.]+"))
+                e.Handled = true;
         }
     }
 }
