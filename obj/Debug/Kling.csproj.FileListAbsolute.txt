@@ -1,0 +1,29 @@
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.Properties.Resources.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csproj.GenerateResource.Cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Kling.exe.config
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Kling.exe
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Kling.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Components.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Gma.System.MouseKeyHook.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\KeyMouseHook.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\bin\Debug\Components.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.exe
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.display.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csproj.CoreCompileInputs.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\obj\Debug\Kling.csproj.CopyComplete
+D:\VisualStudioProjects\Kling\bin\Debug\Kling.exe.config
+D:\VisualStudioProjects\Kling\bin\Debug\Kling.exe
+D:\VisualStudioProjects\Kling\bin\Debug\Kling.pdb
+D:\VisualStudioProjects\Kling\bin\Debug\Components.dll
+D:\VisualStudioProjects\Kling\bin\Debug\Gma.System.MouseKeyHook.dll
+D:\VisualStudioProjects\Kling\bin\Debug\KeyMouseHook.dll
+D:\VisualStudioProjects\Kling\bin\Debug\Components.pdb
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.display.resources
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.Properties.Resources.resources
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.csproj.GenerateResource.cache
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.exe
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.pdb
+D:\VisualStudioProjects\Kling\obj\Debug\Kling.csproj.AssemblyReference.cache

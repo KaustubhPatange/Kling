@@ -1,0 +1,46 @@
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\bin\Debug\Components.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\bin\Debug\Components.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\AboutUI.g.cs
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components_MarkupCompile.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components_MarkupCompile.lref
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\AboutUI.baml
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components.g.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components.Properties.Resources.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components.csproj.GenerateResource.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\Components.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\SettingsUI.g.cs
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Components\obj\Debug\SettingsUI.baml
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\bin\Debug\Components.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\bin\Debug\Components.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\AboutUI.g.cs
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\SettingsUI.g.cs
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components_MarkupCompile.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components_MarkupCompile.lref
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\AboutUI.baml
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\SettingsUI.baml
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.g.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.Properties.Resources.resources
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.csproj.GenerateResource.Cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.dll
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.pdb
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.csprojAssemblyReference.cache
+C:\Users\Dell\Documents\Visual Studio 2017\Projects\Kling\Components\obj\Debug\Components.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjects\Kling\Components\bin\Debug\Components.dll
+D:\VisualStudioProjects\Kling\Components\bin\Debug\Components.pdb
+D:\VisualStudioProjects\Kling\Components\obj\Debug\AboutUI.g.cs
+D:\VisualStudioProjects\Kling\Components\obj\Debug\SettingsUI.g.cs
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components_MarkupCompile.cache
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components_MarkupCompile.lref
+D:\VisualStudioProjects\Kling\Components\obj\Debug\AboutUI.baml
+D:\VisualStudioProjects\Kling\Components\obj\Debug\SettingsUI.baml
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.g.resources
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.Properties.Resources.resources
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.csproj.GenerateResource.cache
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.dll
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.pdb
+D:\VisualStudioProjects\Kling\Components\obj\Debug\CodeUI.g.cs
+D:\VisualStudioProjects\Kling\Components\obj\Debug\CodeUI.baml
+D:\VisualStudioProjects\Kling\Components\obj\Debug\Components.csproj.AssemblyReference.cache
