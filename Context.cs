@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Adb_gui_Apkbox_plugin;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text.RegularExpressions;
 using Components;
 using MessageBox = System.Windows.Forms.MessageBox;
@@ -36,6 +37,8 @@ namespace Kling
         public Context()
         {
             _components = new System.ComponentModel.Container();
+
+            ExtractNecessaryResources();
 
             // Load Settings, but first create if not exist
             if (!File.Exists(@"config.ini"))
@@ -475,6 +478,19 @@ namespace Kling
         {
             if (showKeys.Contains(Text)) return true;
             return false;
+        }
+
+        private void ExtractNecessaryResources()
+        {
+            // King.Resources.keys.txt
+            if (!File.Exists(@"keys.txt"))
+            {
+                using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream("Kling.Resources.keys.txt"))
+                using (var reader = new StreamReader(stream))
+                {
+                    File.WriteAllText(@"keys.txt", reader.ReadToEnd());
+                }
+            }
         }
     }
 }
